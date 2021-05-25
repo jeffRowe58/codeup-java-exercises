@@ -34,7 +34,7 @@ public class ConsoleExercises {
         System.out.println("Give me the width of your classroom");
         float width = scanner.nextFloat();
         System.out.format("The area of class room is: %.2f%n", length*width);
-        System.out.format("The perimeter of your class is: %.2f%n", (length*2)*(width*2));
+        System.out.format("The perimeter of your class is: %.2f%n", (length*2)+(width*2));
 
     }
 }
