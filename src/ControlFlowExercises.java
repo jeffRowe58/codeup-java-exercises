@@ -113,7 +113,6 @@ public class ControlFlowExercises {
                 System.out.println(grad + "D");
             } else if (grade < 70) {
                 System.out.println(grad + "F");
-
             }
             System.out.println("Enter another grade? y/n");
             String userAnswer = scanner.next().toLowerCase(Locale.ROOT);
