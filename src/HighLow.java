@@ -9,10 +9,9 @@ public class HighLow {
         Random rand = new Random();
         int upperbound = 101;
         int int_random = rand.nextInt(upperbound);
-        System.out.println(int_random);
         int counter = 1;
         System.out.println("Guess the random number. 0-100");
-        int userGuess = sc.nextInt();
+        int userGuess = 0;
         do{
              userGuess = sc.nextInt();
             if(userGuess > int_random){
@@ -35,8 +34,6 @@ public class HighLow {
                 }
             }
             System.out.println("Guess again.");
-            userGuess = sc.nextInt();
-            System.out.println(counter);
         }while(counter < 11);
     }
     public static void main(String[] args) {
