@@ -23,14 +23,18 @@ public class HighLow {
             }else if(userGuess == int_random){
                 System.out.println("Good Guess. Want to play again?(y/n)");
                 String newGame = sc.next().toLowerCase(Locale.ROOT);
-                if(newGame == "y"){
+                if(newGame.equals("y")){
                     game();
+                }else{
+                    break;
                 }
             }else if(counter <= 10){
                 System.out.println("You ran out of guesses. Better luck next time");
                 String newGame = sc.next().toLowerCase(Locale.ROOT);
-                if(newGame == "y"){
+                if(newGame.equals("y")){
                     game();
+                }else{
+                    break;
                 }
             }
             System.out.println("Guess again.");

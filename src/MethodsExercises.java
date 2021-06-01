@@ -51,58 +51,57 @@ public class MethodsExercises {
         }
     }
 
-    // recursion in between
-//    public static int getInteger(int min, int max) {
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.printf("Enter a number between %d and %d: ", min, max);
-//        int userIn = scanner.nextInt();
-//        if (userIn > max || userIn < min) {
-//            System.out.println("Please try again.");
-//            return getInteger(min, max);
-//        } else {
-//            System.out.printf("Good job following directions. Your number was %d, which is in between %d and %d.", userIn, min, max);
-//            return userIn;
-//        }
-//
-//    }
-//
-//    //Factorial
-//    public static void factorial() {
-//        boolean more = false;
-//        Scanner sc = new Scanner(System.in);
-//        do{
-//
-//            System.out.println("\nEnter a number between 1 & 46.");
-//            int userNum = sc.nextInt();
-//            while (userNum < 1 || userNum > 46) {
-//                System.out.println("Please enter a number between 1 & 10");
-//                userNum = sc.nextInt();
-//            }
-//            String results = "";
-//            long fact = 1;
-//            for (int i = 1; i <= userNum; i++) {
-//                if (i == 1) {
-//
-//                    System.out.println(i + "! " + " = " + i * fact);
-//                    results = String.valueOf(fact * i);
-//                    fact = fact * i;
-//
-//                } else {
-//                    results = results + " * " + String.valueOf(i);
-//                    System.out.println(i + "! " + " = " + results + " = " + i * fact);
-//                    fact = fact * i;
-//                }
-//            }
-//            System.out.println("Would you like to enter another number? (Yes / No)");
-//            String userSelect = sc.next();
-//            if (userSelect.equalsIgnoreCase("yes")) {
-//                more = true;
-//            }else{
-//                System.out.println("Thanks for using my app");
-//                break;
-//            }
-//        }while(more = true);
-//    }
+     //recursion in between
+    public static int getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Enter a number between %d and %d: ", min, max);
+        int userIn = scanner.nextInt();
+        if (userIn > max || userIn < min) {
+            System.out.println("Please try again.");
+            return getInteger(min, max);
+        } else {
+            System.out.printf("Good job following directions. Your number was %d, which is in between %d and %d.", userIn, min, max);
+            return userIn;
+        }
+
+    }
+
+    //Factorial
+    public static void factorial() {
+        boolean more = false;
+        Scanner sc = new Scanner(System.in);
+        do{
+            System.out.println("\nEnter a number between 1 & 20.");
+            int userNum = sc.nextInt();
+            while (userNum < 1 || userNum > 20) {
+                System.out.println("Please enter a number between 1 & 20");
+                userNum = sc.nextInt();
+            }
+            String results = "";
+            long fact = 1;
+            for (int i = 1; i <= userNum; i++) {
+                if (i == 1) {
+
+                    System.out.println(i + "! " + " = " + i * fact);
+                    results = String.valueOf(fact * i);
+                    fact = fact * i;
+
+                } else {
+                    results = results + " * " + String.valueOf(i);
+                    System.out.println(i + "! " + " = " + results + " = " + i * fact);
+                    fact = fact * i;
+                }
+            }
+            System.out.println("Would you like to enter another number? (Yes / No)");
+            String userSelect = sc.next();
+            if (userSelect.equalsIgnoreCase("yes")) {
+                more = true;
+            }else{
+                System.out.println("Thanks for using my app");
+                break;
+            }
+        }while(more = true);
+    }
 
     public static void rollDice(){
         boolean dice = false;
@@ -141,10 +140,10 @@ public class MethodsExercises {
         System.out.println(multi2(62, 7));
         //recursion
         System.out.println(recursionMult(5, 4));
-        //recursion between
-//        getInteger(1,10);
+        //in between
+         getInteger(1,46);
         //factorial
-//        factorial();
+        factorial();
 
         rollDice();
 
