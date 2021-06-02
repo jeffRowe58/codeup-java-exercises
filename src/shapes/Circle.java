@@ -1,8 +1,6 @@
 package shapes;
 
 public class Circle {
-    public double area;
-    public double cirumference;
     private double radius;
     private double PI = Math.PI;
 
