@@ -6,29 +6,16 @@ public class Circle {
     private double radius;
     private double PI = Math.PI;
 
-    public Circle() {
-
-    }
-
-
     public Circle(double radius) {
-
+        this.radius = radius;
     }
 
-
-
-    public void setRadius (double radius) {
-            this.radius = radius;
-        }
-        public double getRadius () {
-            return this.radius;
-        }
-        public double getArea () {
-            return PI * radius * radius;
-        }
-        public double getCirumference () {
-            return 2 * PI * radius;
-        }
+    public double getArea () {
+        return PI * radius * radius;
+    }
+    public double getCirumference () {
+        return 2 * PI * radius;
+    }
 
 
 }

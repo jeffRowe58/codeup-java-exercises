@@ -39,7 +39,7 @@ public class Input {
             System.out.println("Please try again.");
             getInt(min, max);
         } else {
-            System.out.printf("Good job following directions. Your number was %d, which is in between %d and %d.", userIn, min, max);
+            System.out.printf("Good job following directions. Your number was %d, which is in between %d and %d.\n", userIn, min, max);
         }
         return userIn;
     }
