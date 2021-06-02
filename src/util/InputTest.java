@@ -10,7 +10,5 @@ public class InputTest {
         System.out.println(input2.getInt());
         System.out.println(input2.getDouble(1.999, 57.999));
         System.out.println(input2.getDouble());
-
-
     }
 }

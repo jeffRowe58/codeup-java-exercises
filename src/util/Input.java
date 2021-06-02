@@ -15,8 +15,8 @@ public class Input {
 
     public String getString() {
         System.out.println("Please enter your favorite quote");
-        String quote = scanner.nextLine();
-        return quote;
+        return  this.scanner.nextLine();
+
     }
 
     //boolean user input method
@@ -24,32 +24,27 @@ public class Input {
     public boolean yesNo() {
         System.out.println("Please enter either yes or no.");
         String booYou = scanner.next().toLowerCase(Locale.ROOT);
-        if (booYou.startsWith("y")) {
-            return true;
-        } else {
-            return false;
-        }
+        return booYou.startsWith("y");
     }
 
     //user min max
     public int getInt(int min, int max) {
         System.out.printf("Enter a number between %d and %d: ", min, max);
         int userIn = scanner.nextInt();
-        if (userIn > max || userIn < min) {
-            System.out.println("Please try again.");
-            getInt(min, max);
+        if (userIn >= min && userIn <= max) {
+            return userIn;
         } else {
-            System.out.printf("Good job following directions. Your number was %d, which is in between %d and %d.\n", userIn, min, max);
+            System.out.println("That number is invalid");
+            return getInt(min, max);
         }
-        return userIn;
+
     }
 
     //user getInt
 
     public int getInt() {
         System.out.println("Please enter a number.");
-        int num = scanner.nextInt();
-        return num;
+        return scanner.nextInt();
     }
 
     //user double min max
@@ -57,21 +52,20 @@ public class Input {
     public double getDouble(double min, double max) {
         System.out.printf("Enter a number between %f and %f: ", min, max);
         double userInput = scanner.nextDouble();
-        if (userInput > max || userInput < min) {
-            System.out.println("Please try again.");
-            return getDouble(min, max);
-        } else {
-            System.out.printf("Good job following directions. Your number was %f, which is in between %f and %f.", userInput, min, max);
+        if (userInput >= min && userInput <= max) {
             return userInput;
+        } else {
+            System.out.println("That number is invalid");
+            return getDouble(min, max);
         }
     }
+
 
     //user getDouble
 
     public double getDouble() {
-        System.out.println("Please enter a number with a decimal point");
-        double userDouble = scanner.nextDouble();
-        return userDouble;
+        System.out.println("Please enter a number with decimal.");
+        return scanner.nextDouble();
     }
 
 
