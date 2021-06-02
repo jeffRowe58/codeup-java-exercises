@@ -15,8 +15,8 @@ public class Input {
 
     public String getString() {
         System.out.println("Please enter your favorite quote");
-        String qoute = scanner.nextLine();
-        return qoute;
+        String quote = scanner.nextLine();
+        return quote;
     }
 
     //boolean user input method
@@ -69,7 +69,7 @@ public class Input {
     //user getDouble
 
     public double getDouble() {
-        System.out.println("Please enter a double");
+        System.out.println("Please enter a number with a decimal point");
         double userDouble = scanner.nextDouble();
         return userDouble;
     }
