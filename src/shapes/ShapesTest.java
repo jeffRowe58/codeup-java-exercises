@@ -9,6 +9,8 @@ public class ShapesTest {
 
         System.out.println(myShape.getArea());
         System.out.println(myShape2.getArea());
+        System.out.println(myShape.getPerimeter());
+        System.out.println(myShape2.getPerimeter());
 //        Rectangle box1 = new Rectangle(5,4);
 //        Square box2 = new Square(5);
 //
