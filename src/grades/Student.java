@@ -7,6 +7,7 @@ public class Student {
     private ArrayList<Integer> grade;
 
 
+
     public Student(String name){
         this.name = name;
         this.grade = new ArrayList<>();

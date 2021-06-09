@@ -14,18 +14,18 @@ public class Input {
     //getString method
 
     public String getString() {
-        System.out.println("Please enter your favorite quote");
+//        System.out.println("Please enter your favorite quote");
         return  this.scanner.nextLine();
 
     }
 
     //boolean user input method
 
-    public boolean yesNo() {
-        System.out.println("Please enter either yes or no.");
-        String booYou = scanner.next().toLowerCase(Locale.ROOT);
-        return booYou.startsWith("y");
-    }
+//    public boolean yesNo() {
+//        System.out.println("Please enter either yes or no.");
+//        String booYou = scanner.next().toLowerCase(Locale.ROOT);
+//        return booYou.startsWith("y");
+//    }
 
     //user min max
     public int getInt(int min, int max) {
@@ -41,11 +41,17 @@ public class Input {
     }
 
     //user getInt
-
+    @SuppressWarnings("all")
     public int getInt() {
         System.out.println("Please enter a number.");
-        return scanner.nextInt();
+        try{
+           return Integer.valueOf(getString());
+        }catch(NumberFormatException nfe){
+            System.out.println("That's not a number!");
+            return getInt();
+        }
     }
+
 
     //user double min max
 
@@ -62,10 +68,15 @@ public class Input {
 
 
     //user getDouble
-
+    @SuppressWarnings("all")
     public double getDouble() {
         System.out.println("Please enter a number with decimal.");
-        return scanner.nextDouble();
+        try{
+            return Double.valueOf(getString());
+        }catch(NumberFormatException nfe){
+            System.out.println("That's not a number!");
+            return getDouble();
+        }
     }
 
 

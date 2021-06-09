@@ -31,8 +31,8 @@ public class GradesApplication{
 
         Student student4 = new Student("Jim");
         student4.addGrade(87);
-        student4.addGrade(75);
-        student4.addGrade(72);
+        student4.addGrade(89);
+        student4.addGrade(60);
         students.put("jimBo", student4);
 
         Set<String> keySet = students.keySet();
@@ -41,7 +41,7 @@ public class GradesApplication{
 
         System.out.println("Welcome!");
         System.out.println("Here are the Github usernames of our students:");
-        for (int i = 0; i < keySet.size(); i++) {
+        for (int i = 0; i < listOfKeys.size(); i++) {
             System.out.printf("| %s |\t", listOfKeys.get(i));
         }
         System.out.println();
@@ -57,12 +57,10 @@ public class GradesApplication{
                 System.out.println("Sorry, no student found with the Github username of " + user);
             }
         }while(!listOfKeys.contains(user));
-        Boolean test = false;
         do{
             System.out.println("Would you like to see another student");
             user = sc.next();
             if(user.equalsIgnoreCase("y")  || user.equalsIgnoreCase("yes")){
-                test = true;
                 System.out.println("What student would you like more information on?");
                 user = sc.next();
                 if(listOfKeys.contains(user)){
@@ -72,11 +70,10 @@ public class GradesApplication{
                 }
 
             }else if(user.equalsIgnoreCase("n") || user.equalsIgnoreCase("no")){
-                test = false;
                 System.out.println("Goodbye, and have a wonderful day.");
                 break;
             }
-        }while(test = true);
+        }while(true);
 
         }
 
