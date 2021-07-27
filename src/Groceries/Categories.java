@@ -6,7 +6,6 @@ import java.util.Formatter;
 
 public class Categories {
 
-    private String cat;
     private String name;
     public ArrayList<Object> food;
     private int quantity;
@@ -20,12 +19,13 @@ public class Categories {
 
     public static void main(String[] args) {
         Categories dairy = new Categories();
-
-        Items dairyProduct = new Items("Milk", 2, 2.99);
+//        Categories food = new ArrayList<>();
+        Items dairyProduct = new Items("Milk", 2);
         dairy.food.add(dairyProduct);
 
-        Items dairyProduct2 = new Items("Cheese", 4, 3.99);
+        Items dairyProduct2 = new Items("Cheese", 4);
         dairy.food.add(dairyProduct2);
 
+        System.out.println();
     }
 }
